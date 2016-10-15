@@ -28,6 +28,7 @@
 // 播放
 - (IBAction)paly {
     NSLog(@"播放");
+    
     [self.playerController play];
 }
 

@@ -38,7 +38,7 @@
 - (AVAudioPlayer *)playerWithFileName:(NSString *)fileName {
 
 
-    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"caf"];
+    NSURL *fileURL = [[NSBundle bundleForClass:[self class]] URLForResource:fileName withExtension:@"caf"];
     
     NSError *error;
     AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:&error];

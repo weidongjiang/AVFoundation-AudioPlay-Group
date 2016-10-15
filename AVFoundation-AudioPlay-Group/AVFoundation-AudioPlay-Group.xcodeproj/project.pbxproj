@@ -15,6 +15,9 @@
 		76E522A61DB1DB99005CB40D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E522A41DB1DB99005CB40D /* LaunchScreen.storyboard */; };
 		76E522AF1DB1DEBF005CB40D /* JWDPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E522AE1DB1DEBF005CB40D /* JWDPlayerController.m */; };
 		76E522B61DB26950005CB40D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E522B51DB26950005CB40D /* AVFoundation.framework */; };
+		76E522BA1DB277D6005CB40D /* bass.caf in Resources */ = {isa = PBXBuildFile; fileRef = 76E522B71DB275AA005CB40D /* bass.caf */; };
+		76E522BB1DB277D6005CB40D /* drums.caf in Resources */ = {isa = PBXBuildFile; fileRef = 76E522B81DB275AA005CB40D /* drums.caf */; };
+		76E522BC1DB277D6005CB40D /* guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 76E522B91DB275AA005CB40D /* guitar.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +33,10 @@
 		76E522A71DB1DB99005CB40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76E522AD1DB1DEBF005CB40D /* JWDPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDPlayerController.h; sourceTree = "<group>"; };
 		76E522AE1DB1DEBF005CB40D /* JWDPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDPlayerController.m; sourceTree = "<group>"; };
-		76E522B11DB1E26C005CB40D /* bass.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.caf; sourceTree = "<group>"; };
-		76E522B21DB1E26C005CB40D /* drums.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.caf; sourceTree = "<group>"; };
-		76E522B31DB1E26C005CB40D /* guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = guitar.caf; sourceTree = "<group>"; };
 		76E522B51DB26950005CB40D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		76E522B71DB275AA005CB40D /* bass.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.caf; sourceTree = "<group>"; };
+		76E522B81DB275AA005CB40D /* drums.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.caf; sourceTree = "<group>"; };
+		76E522B91DB275AA005CB40D /* guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = guitar.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +98,9 @@
 		76E522B01DB1E25D005CB40D /* loops */ = {
 			isa = PBXGroup;
 			children = (
-				76E522B11DB1E26C005CB40D /* bass.caf */,
-				76E522B21DB1E26C005CB40D /* drums.caf */,
-				76E522B31DB1E26C005CB40D /* guitar.caf */,
+				76E522B71DB275AA005CB40D /* bass.caf */,
+				76E522B81DB275AA005CB40D /* drums.caf */,
+				76E522B91DB275AA005CB40D /* guitar.caf */,
 			);
 			path = loops;
 			sourceTree = "<group>";
@@ -169,6 +172,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E522BA1DB277D6005CB40D /* bass.caf in Resources */,
+				76E522BB1DB277D6005CB40D /* drums.caf in Resources */,
+				76E522BC1DB277D6005CB40D /* guitar.caf in Resources */,
 				76E522A61DB1DB99005CB40D /* LaunchScreen.storyboard in Resources */,
 				76E522A31DB1DB99005CB40D /* Assets.xcassets in Resources */,
 				76E522A11DB1DB99005CB40D /* Main.storyboard in Resources */,
