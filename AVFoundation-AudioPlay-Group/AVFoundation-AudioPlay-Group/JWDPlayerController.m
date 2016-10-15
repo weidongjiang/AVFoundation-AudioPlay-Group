@@ -9,6 +9,7 @@
 #import "JWDPlayerController.h"
 #import <AVFoundation/AVFoundation.h>
 
+
 @interface JWDPlayerController ()
 
 @property (nonatomic,assign) BOOL    playing;
@@ -36,21 +37,23 @@
 
 - (AVAudioPlayer *)playerWithFileName:(NSString *)fileName {
 
-    NSURL *fileUrl = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"caf"];
+
+    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"caf"];
     
     NSError *error;
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:&error];
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:&error];
     
     if (audioPlayer) {
         audioPlayer.numberOfLoops = -1; // 无限循环播放
         audioPlayer.enableRate = YES; // 设置为 YES 可以控制播放速率
         [audioPlayer prepareToPlay];
-        
+        return audioPlayer;
+
     }else {
         NSLog(@"创建播放器出错 error: %@",[error localizedDescription]);
+        return nil;
     }
     
-    return audioPlayer;
 }
 
 

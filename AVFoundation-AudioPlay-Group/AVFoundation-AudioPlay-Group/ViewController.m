@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "JWDPlayerController.h"
 
 @interface ViewController ()
+
+@property(nonatomic, strong)JWDPlayerController *playerController;//!< <#value#>
 
 @end
 
@@ -17,19 +20,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.playerController = [[JWDPlayerController alloc] init];
+    
     
     
 }
 // 播放
 - (IBAction)paly {
     NSLog(@"播放");
-    
+    [self.playerController play];
 }
 
 
 // 暂停
 - (IBAction)stop {
     NSLog(@"暂停");
+    [self.playerController stop];
 }
 // 速率
 - (IBAction)changeRate:(UISlider *)sender {
