@@ -13,6 +13,7 @@
 		76E522A11DB1DB99005CB40D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E5229F1DB1DB99005CB40D /* Main.storyboard */; };
 		76E522A31DB1DB99005CB40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E522A21DB1DB99005CB40D /* Assets.xcassets */; };
 		76E522A61DB1DB99005CB40D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E522A41DB1DB99005CB40D /* LaunchScreen.storyboard */; };
+		76E522AF1DB1DEBF005CB40D /* JWDPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E522AE1DB1DEBF005CB40D /* JWDPlayerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,11 @@
 		76E522A21DB1DB99005CB40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76E522A51DB1DB99005CB40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76E522A71DB1DB99005CB40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76E522AD1DB1DEBF005CB40D /* JWDPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDPlayerController.h; sourceTree = "<group>"; };
+		76E522AE1DB1DEBF005CB40D /* JWDPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDPlayerController.m; sourceTree = "<group>"; };
+		76E522B11DB1E26C005CB40D /* bass.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.caf; sourceTree = "<group>"; };
+		76E522B21DB1E26C005CB40D /* drums.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.caf; sourceTree = "<group>"; };
+		76E522B31DB1E26C005CB40D /* guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = guitar.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +68,10 @@
 				76E5229A1DB1DB99005CB40D /* AppDelegate.m */,
 				76E5229C1DB1DB99005CB40D /* ViewController.h */,
 				76E5229D1DB1DB99005CB40D /* ViewController.m */,
+				76E522AD1DB1DEBF005CB40D /* JWDPlayerController.h */,
+				76E522AE1DB1DEBF005CB40D /* JWDPlayerController.m */,
 				76E5229F1DB1DB99005CB40D /* Main.storyboard */,
+				76E522B01DB1E25D005CB40D /* loops */,
 				76E522A21DB1DB99005CB40D /* Assets.xcassets */,
 				76E522A41DB1DB99005CB40D /* LaunchScreen.storyboard */,
 				76E522A71DB1DB99005CB40D /* Info.plist */,
@@ -77,6 +86,16 @@
 				76E522971DB1DB99005CB40D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76E522B01DB1E25D005CB40D /* loops */ = {
+			isa = PBXGroup;
+			children = (
+				76E522B11DB1E26C005CB40D /* bass.caf */,
+				76E522B21DB1E26C005CB40D /* drums.caf */,
+				76E522B31DB1E26C005CB40D /* guitar.caf */,
+			);
+			path = loops;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +129,7 @@
 				TargetAttributes = {
 					76E522921DB1DB99005CB40D = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3ZPP94SLYH;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -152,6 +172,7 @@
 			files = (
 				76E5229E1DB1DB99005CB40D /* ViewController.m in Sources */,
 				76E5229B1DB1DB99005CB40D /* AppDelegate.m in Sources */,
+				76E522AF1DB1DEBF005CB40D /* JWDPlayerController.m in Sources */,
 				76E522981DB1DB99005CB40D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
 				INFOPLIST_FILE = "AVFoundation-AudioPlay-Group/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yixia.AVFoundation-AudioPlay-Group";
@@ -281,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3ZPP94SLYH;
 				INFOPLIST_FILE = "AVFoundation-AudioPlay-Group/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yixia.AVFoundation-AudioPlay-Group";
