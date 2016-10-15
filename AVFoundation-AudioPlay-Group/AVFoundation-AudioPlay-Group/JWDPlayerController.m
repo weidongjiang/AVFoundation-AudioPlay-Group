@@ -28,7 +28,7 @@
         AVAudioPlayer *bassplayer = [self playerWithFileName:@"bass"];
         AVAudioPlayer *drumplayer = [self playerWithFileName:@"drums"];
         
-        _players = @[guitarplayer,bassplayer,drumplayer];
+        _players = @[guitarplayer,drumplayer,bassplayer];
         
     }
     return self;

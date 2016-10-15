@@ -20,12 +20,48 @@
     
     
 }
+// 播放
+- (IBAction)paly {
+    NSLog(@"播放");
+    
+}
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// 暂停
+- (IBAction)stop {
+    NSLog(@"暂停");
+}
+// 速率
+- (IBAction)changeRate:(UISlider *)sender {
+    NSLog(@"改变速率-sender %f -- tag %ld",sender.value,(long)sender.tag);
+}
+
+
+// 音量
+- (IBAction)changeVolume:(UISlider *)sender {
+    NSLog(@"改变音量-sender %f -- tag %ld",sender.value,(long)sender.tag);
+}
+
+// 声道权衡
+- (IBAction)pan:(UISlider *)sender {
+    NSLog(@"改变声道比重-sender %f -- tag %ld",sender.value,(long)sender.tag);
 }
 
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
