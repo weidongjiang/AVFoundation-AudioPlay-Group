@@ -34,8 +34,30 @@
         // 注册中断事件的通知
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
         
+        // 注册保护用户隐私的通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleRouteChange:) name:AVAudioSessionRouteChangeNotification object:[AVAudioSession sharedInstance]];
+        
     }
     return self;
+}
+
+- (void)handleRouteChange:(NSNotification *)notification {
+
+    
+    NSDictionary *info = notification.userInfo;
+    NSLog(@"info--%@",info);
+    AVAudioSessionRouteChangeReason reason = [info[AVAudioSessionRouteChangeReasonKey] unsignedIntegerValue];
+    
+    if (reason == AVAudioSessionRouteChangeReasonOldDeviceUnavailable) {
+    
+        AVAudioSessionRouteDescription *description = info[AVAudioSessionRouteChangePreviousRouteKey];
+        AVAudioSessionPortDescription *portDescription = description.outputs[0];
+        NSString *portType = portDescription.portType;
+        if ([portType isEqualToString:AVAudioSessionPortHeadphones]){
+            [self stop];
+        }
+    }
+    
 }
 
 - (void)handleInterruption:(NSNotification *)notification {
