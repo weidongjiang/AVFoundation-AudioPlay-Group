@@ -49,7 +49,7 @@
 // 音量
 - (IBAction)changeVolume:(UISlider *)sender {
     NSLog(@"改变音量-sender %f -- tag %ld",sender.value,(long)sender.tag);
-
+    [self.playerController adjustVolume:sender.value forPlayerAtIndex:sender.tag];
 
 }
 
