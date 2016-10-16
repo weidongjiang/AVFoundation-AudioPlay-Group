@@ -31,9 +31,32 @@
         
         _players = @[guitarplayer,drumplayer,bassplayer];
         
+        // 注册中断事件的通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
+        
     }
     return self;
 }
+
+- (void)handleInterruption:(NSNotification *)notification {
+
+    NSDictionary *info = notification.userInfo;
+    AVAudioSessionInterruptionType type = [info[AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+    
+    if (type == AVAudioSessionInterruptionTypeBegan) {// 开始中断
+        
+        [self stop];
+   
+    }else {// 中断结束
+        
+        AVAudioSessionInterruptionOptions options = [info[AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];
+        if (options == AVAudioSessionInterruptionOptionShouldResume) {
+            [self play];
+        }
+    
+    }
+}
+
 
 - (AVAudioPlayer *)playerWithFileName:(NSString *)fileName {
 
