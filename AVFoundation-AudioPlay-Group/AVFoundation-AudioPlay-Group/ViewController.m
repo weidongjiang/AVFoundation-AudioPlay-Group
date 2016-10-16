@@ -41,12 +41,16 @@
 // 速率
 - (IBAction)changeRate:(UISlider *)sender {
     NSLog(@"改变速率-sender %f -- tag %ld",sender.value,(long)sender.tag);
+    
+    [self.playerController adjustRate:sender.value forPlayerAtIndex:sender.tag];
 }
 
 
 // 音量
 - (IBAction)changeVolume:(UISlider *)sender {
     NSLog(@"改变音量-sender %f -- tag %ld",sender.value,(long)sender.tag);
+
+
 }
 
 // 声道权衡

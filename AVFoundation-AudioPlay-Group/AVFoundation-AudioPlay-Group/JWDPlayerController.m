@@ -86,9 +86,15 @@
     }
 }
 // 速率,在不改变音调的前提下，改变速率
-- (void)adjustRate:(CGFloat)rate {
+- (void)adjustRate:(CGFloat)rate forPlayerAtIndex:(NSInteger)index;{
 
-    for (AVAudioPlayer *player in self.players) {
+//    for (AVAudioPlayer *player in self.players) {
+//        AVAudioPlayer *player = self.players[index];
+//        player.rate = rate;
+//    }
+    
+    if([self isValidIndex:index]){
+        AVAudioPlayer *player = self.players[index];
         player.rate = rate;
     }
 }

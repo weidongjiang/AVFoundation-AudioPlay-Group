@@ -17,7 +17,7 @@
 
 - (void)play;
 - (void)stop;
-- (void)adjustRate:(CGFloat)rate;// 控制播放速率
+- (void)adjustRate:(CGFloat)rate forPlayerAtIndex:(NSInteger)index;;// 控制播放速率
 
 - (void)adjustPan:(CGFloat)pan forPlayerAtIndex:(NSInteger)index; /* 调节声道权重  set panning. -1.0 is left, 0.0 is center, 1.0 is right. */
 - (void)adjustVolume:(CGFloat)volume forPlayerAtIndex:(NSInteger)index; // 音量
