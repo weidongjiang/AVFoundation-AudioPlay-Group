@@ -87,11 +87,6 @@
 }
 // 速率,在不改变音调的前提下，改变速率
 - (void)adjustRate:(CGFloat)rate forPlayerAtIndex:(NSInteger)index;{
-
-//    for (AVAudioPlayer *player in self.players) {
-//        AVAudioPlayer *player = self.players[index];
-//        player.rate = rate;
-//    }
     
     if([self isValidIndex:index]){
         AVAudioPlayer *player = self.players[index];
@@ -100,11 +95,12 @@
 }
 
 /* 调节声道权重  set panning. -1.0 is left, 0.0 is center, 1.0 is right. */
-- (void)adjustPan:(CGFloat)pan forPlayerAtIndex:(NSInteger)index {
-    if([self isValidIndex:index]){
-        AVAudioPlayer *player = self.players[index];
+- (void)adjustPan:(CGFloat)pan  {
+
+    for (AVAudioPlayer *player in self.players) {
         player.pan = pan;
     }
+    
 }
 // 音量
 - (void)adjustVolume:(CGFloat)volume forPlayerAtIndex:(NSInteger)index {

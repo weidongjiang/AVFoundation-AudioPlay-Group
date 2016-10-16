@@ -56,6 +56,7 @@
 // 声道权衡
 - (IBAction)pan:(UISlider *)sender {
     NSLog(@"改变声道比重-sender %f -- tag %ld",sender.value,(long)sender.tag);
+    [self.playerController adjustPan:sender.value ];
 }
 
 

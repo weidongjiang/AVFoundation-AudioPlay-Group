@@ -111,7 +111,7 @@
                                     <action selector="stop" destination="BYZ-38-t0r" eventType="touchUpInside" id="j53-iv-Vzk"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9o5-uR-ZTG">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9o5-uR-ZTG">
                                 <frame key="frameInset" minX="279" minY="377" width="70" height="31"/>
                                 <connections>
                                     <action selector="pan:" destination="BYZ-38-t0r" eventType="valueChanged" id="gCY-Cu-uW2"/>
